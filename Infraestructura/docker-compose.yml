@@ -1,0 +1,34 @@
+services:
+  dozzle:
+    container_name: dozzle
+    image: amir20/dozzle:latest
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    ports:
+      - 8888:8080
+    restart: unless-stopped
+
+  beszel:
+    container_name: beszel
+    image: henrygd/beszel:latest
+    ports:
+      - 8090:8090
+    volumes:
+      - ./beszel_data:/data
+    restart: unless-stopped
+
+  beszel-agent:
+    image: henrygd/beszel-agent
+    container_name: beszel-agent
+    restart: unless-stopped
+    network_mode: host
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - ./beszel_agent_data:/var/lib/beszel-agent
+      # monitor other disks / partitions by mounting a folder in /extra-filesystems
+      # - /mnt/disk/.beszel:/extra-filesystems/sda1:ro
+    environment:
+      LISTEN: 45876
+      KEY: 'ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBBgO0xwgN/OL+zClU3F7tfv1Ui7tBMeZQB6ddQvGYjW'
+      TOKEN: 6f1d27d7-e12a-4c24-a05b-f84afcb6abc0
+      HUB_URL: http://localhost:8090
