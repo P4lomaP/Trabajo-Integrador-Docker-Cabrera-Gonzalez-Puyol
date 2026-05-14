@@ -5,7 +5,8 @@ services:
     restart: unless-stopped
     environment:
       - SIGNUPS_ALLOWED=true
-      - DOMAIN=http://localhost:8080  
+      - DOMAIN=http://localhost:8080
+      - ADMIN_TOKEN=alumnos2026  
     volumes:
       - ./vw-data:/data
     ports:
