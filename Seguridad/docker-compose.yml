@@ -1,0 +1,25 @@
+services:
+  vaultwarden:
+    container_name: vaultwarden
+    image: vaultwarden/server:latest
+    restart: unless-stopped
+    environment:
+      - SIGNUPS_ALLOWED=true  # Permite que Seba y Euge se registren
+    volumes:
+      - ./vw-data:/data
+    ports:
+      - 8080:80
+
+  tailscale:
+    container_name: tailscale-container
+    image: tailscale/tailscale:latest
+    restart: unless-stopped
+    hostname: paloma-docker-node
+    environment:
+      - TS_STATEFUL_CONFIG=true
+    volumes:
+      - ./tailscale-data:/var/lib/tailscale
+      - /dev/net/tun:/dev/net/tun
+    cap_add:
+      - NET_ADMIN
+      - SYS_MODULE
