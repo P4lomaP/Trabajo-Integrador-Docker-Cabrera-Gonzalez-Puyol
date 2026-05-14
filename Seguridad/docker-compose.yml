@@ -4,11 +4,24 @@ services:
     image: vaultwarden/server:latest
     restart: unless-stopped
     environment:
-      - SIGNUPS_ALLOWED=true  # Permite que Seba y Euge se registren
+      - SIGNUPS_ALLOWED=true
+      - DOMAIN=http://localhost:8080  
     volumes:
       - ./vw-data:/data
     ports:
       - 8080:80
+
+  nginx-proxy-manager:
+    container_name: nginx-proxy-manager
+    image: 'jc21/nginx-proxy-manager:latest'
+    restart: unless-stopped
+    ports:
+      - '81:81'   # Panel de administración
+      - '80:80'   # Tráfico HTTP
+      - '443:443' # Tráfico HTTPS
+    volumes:
+      - ./npm-data:/data
+      - ./npm-letsencrypt:/etc/letsencrypt
 
   tailscale:
     container_name: tailscale-container
