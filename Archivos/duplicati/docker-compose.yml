@@ -1,0 +1,15 @@
+services:
+  duplicati:
+    image: duplicati/duplicati:latest
+    container_name: duplicati
+    environment:
+      - TZ=America/Argentina/Buenos_Aires
+    volumes:
+      - duplicati_config:/data
+      - ./backups:/backups
+    ports:
+      - "8200:8200"
+    restart: unless-stopped
+
+volumes:
+  duplicati_config:
