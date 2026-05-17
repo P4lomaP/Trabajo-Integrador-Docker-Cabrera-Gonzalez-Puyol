@@ -50,5 +50,22 @@ services:
     volumes:
       - pocketid_data:/app/data
 
+  wireguard:
+    image: lscr.io/linuxserver/wireguard:latest
+    container_name: wireguard
+    cap_add:
+      - NET_ADMIN
+    environment:
+      - TZ=America/Argentina/Buenos_Aires
+      - SERVERURL=127.0.0.1
+      - SERVERPORT=51820
+      - PEERS=palomapc,palomacelu
+      - PEERDNS=auto
+    volumes:
+      - ./wireguard-data:/config
+    ports:
+      - "51820:51820/udp"
+    restart: unless-stopped   
+
 volumes:
   pocketid_data:
