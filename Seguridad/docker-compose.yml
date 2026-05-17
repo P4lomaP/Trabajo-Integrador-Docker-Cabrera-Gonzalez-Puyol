@@ -17,9 +17,9 @@ services:
     image: 'jc21/nginx-proxy-manager:latest'
     restart: unless-stopped
     ports:
-      - '81:81'   # Panel de administración
-      - '80:80'   # Tráfico HTTP
-      - '443:443' # Tráfico HTTPS
+      - '81:81'   
+      - '80:80'   
+      - '443:443' 
     volumes:
       - ./npm-data:/data
       - ./npm-letsencrypt:/etc/letsencrypt
@@ -37,3 +37,18 @@ services:
     cap_add:
       - NET_ADMIN
       - SYS_MODULE
+
+  pocket-id:
+    image: ghcr.io/pocket-id/pocket-id:latest
+    container_name: pocket-id
+    restart: unless-stopped
+    ports:
+      - "1411:1411"
+    environment:
+      - TRUST_PROXY=true
+      - ENCRYPTION_KEY=claveSuperSecretaAlumnos2026
+    volumes:
+      - pocketid_data:/app/data
+
+volumes:
+  pocketid_data:
