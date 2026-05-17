@@ -1,0 +1,10 @@
+**/data/
+**/*_data/
+*.log
+.env
+npm-data/
+vw-data/
+beszel_data/
+beszel_agent_data/
+*.sqlite3-shm
+*.sqlite3-wal
