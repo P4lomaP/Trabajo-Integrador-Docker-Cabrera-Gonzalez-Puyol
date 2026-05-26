@@ -1,0 +1,149 @@
+[INFO|server|L82] 2026-05-26T11:17:42: Started server process [1]
+[INFO|on|L48] 2026-05-26T11:17:42: Waiting for application startup.
+[INFO|app|L52] 2026-05-26T11:17:42: start: database initialization
+[INFO|init_db|L80] 2026-05-26T11:17:42: Database connection established.
+[INFO|migration|L215] 2026-05-26T11:17:42: Context impl SQLiteImpl.
+[INFO|migration|L218] 2026-05-26T11:17:42: Will assume non-transactional DDL.
+[INFO|init_db|L100] 2026-05-26T11:17:42: Migration needed. Performing migration...
+[INFO|migration|L215] 2026-05-26T11:17:42: Context impl SQLiteImpl.
+[INFO|migration|L218] 2026-05-26T11:17:42: Will assume non-transactional DDL.
+[INFO|migration|L623] 2026-05-26T11:17:42: Running upgrade  -> 6b0f5f32d602, Initial tables
+[INFO|migration|L623] 2026-05-26T11:17:43: Running upgrade 6b0f5f32d602 -> 263dd6707191, convert quantity from integer to float
+[INFO|migration|L623] 2026-05-26T11:17:43: Running upgrade 263dd6707191 -> f1a2dbee5fe9, Add original_text column to recipes_ingredients
+[INFO|migration|L623] 2026-05-26T11:17:43: Running upgrade f1a2dbee5fe9 -> 59eb59135381, add tags to cookbooks
+[INFO|migration|L623] 2026-05-26T11:17:43: Running upgrade 59eb59135381 -> 09dfc897ad62, add require_all for cookbook filters
+[INFO|migration|L623] 2026-05-26T11:17:43: Running upgrade 09dfc897ad62 -> ab0bae02578f, Add use_abbreviation column to ingredients
+[INFO|migration|L623] 2026-05-26T11:17:44: Running upgrade ab0bae02578f -> f30cf048c228, add new webhook fields
+[INFO|migration|L623] 2026-05-26T11:17:44: Running upgrade f30cf048c228 -> 188374910655, add login_attemps and locked_at field to user table
+[INFO|migration|L623] 2026-05-26T11:17:44: Running upgrade 188374910655 -> 089bfa50d0ed, Add is_ocr_recipe column to recipes
+[INFO|migration|L623] 2026-05-26T11:17:44: Running upgrade 089bfa50d0ed -> 44e8d670719d, add extras to shopping lists, list items, and ingredient foods
+[INFO|migration|L623] 2026-05-26T11:17:44: Running upgrade 44e8d670719d -> 2ea7a807915c, add recipe_timeline_events table
+[INFO|migration|L623] 2026-05-26T11:17:44: Running upgrade 2ea7a807915c -> 1923519381ad, added recipe last made timestamp
+[INFO|migration|L623] 2026-05-26T11:17:44: Running upgrade 1923519381ad -> 167eb69066ad, add recipe_scale to shopping list item ref
+[INFO|migration|L623] 2026-05-26T11:17:44: Running upgrade 167eb69066ad -> 165d943c64ee, add related user to mealplan
+[INFO|migration|L623] 2026-05-26T11:17:44: Running upgrade 165d943c64ee -> ff5f73b01a7a, add missing foreign key and order indices
+[INFO|migration|L623] 2026-05-26T11:17:45: Running upgrade ff5f73b01a7a -> 16160bf731a0, add more indices necessary for search
+[INFO|migration|L623] 2026-05-26T11:17:45: Running upgrade 16160bf731a0 -> 5ab195a474eb, add normalized search properties
+[INFO|migration|L623] 2026-05-26T11:17:46: Running upgrade 5ab195a474eb -> b04a08da2108, added shopping list label settings
+[INFO|migration|L623] 2026-05-26T11:17:46: Running upgrade b04a08da2108 -> 38514b39a824, add auth_method to user table
+[INFO|migration|L623] 2026-05-26T11:17:46: Running upgrade 38514b39a824 -> b3dbb554ba53, postgres fuzzy search
+[INFO|migration|L623] 2026-05-26T11:17:46: Running upgrade b3dbb554ba53 -> 04ac51cbe9a4, added group slug
+[INFO|migration|L623] 2026-05-26T11:17:46: Running upgrade 04ac51cbe9a4 -> 1825b5225403, added recipe note to shopping list recipe ref
+[INFO|migration|L623] 2026-05-26T11:17:46: Running upgrade 1825b5225403 -> bcfdad6b7355, remove tool name and slug unique contraints
+[INFO|migration|L623] 2026-05-26T11:17:46: Running upgrade bcfdad6b7355 -> 0341b154f79a, added normalized unit and food names
+[INFO|migration|L623] 2026-05-26T11:17:46: Running upgrade 0341b154f79a -> dded3119c1fe, added unique constraints
+[INFO|migration|L623] 2026-05-26T11:17:46: Running upgrade dded3119c1fe -> ba1e4a6cfe99, added plural names and alias tables for foods and units
+[INFO|migration|L623] 2026-05-26T11:17:47: Running upgrade ba1e4a6cfe99 -> 2298bb460ffd, added user to shopping list
+[INFO|migration|L623] 2026-05-26T11:17:47: Running upgrade 2298bb460ffd -> 09aba125b57a, add OIDC auth method
+[INFO|migration|L623] 2026-05-26T11:17:47: Running upgrade 09aba125b57a -> d7c6efd2de42, migrate favorites and ratings to user_ratings
+[INFO|migration|L623] 2026-05-26T11:17:47: Running upgrade d7c6efd2de42 -> 7788478a0338, add group recipe actions
+[INFO|migration|L623] 2026-05-26T11:17:47: Running upgrade 7788478a0338 -> 32d69327997b, Add staple flag to foods
+[INFO|fix_migration_data|L146] 2026-05-26T11:17:47: Checking for migration data fixes
+[INFO|init_db|L114] 2026-05-26T11:17:47: Database contains no users, initializing...
+[INFO|init_db|L36] 2026-05-26T11:17:47: Generating Default Group
+[INFO|init_users|L57] 2026-05-26T11:17:47: Generating Default User
+[INFO|app|L56] 2026-05-26T11:17:47: end: database initialization
+[INFO|app|L60] 2026-05-26T11:17:47: -----SYSTEM STARTUP-----
+[INFO|app|L61] 2026-05-26T11:17:47: ------APP SETTINGS------
+[INFO|app|L62] 2026-05-26T11:17:47: {
+    "TESTING": false,
+    "PRODUCTION": true,
+    "LOG_CONFIG_OVERRIDE": null,
+    "LOG_LEVEL": "info",
+    "theme": {
+        "light_primary": "#E58325",
+        "light_accent": "#007A99",
+        "light_secondary": "#973542",
+        "light_success": "#43A047",
+        "light_info": "#1976D2",
+        "light_warning": "#FF6D00",
+        "light_error": "#EF5350",
+        "dark_primary": "#E58325",
+        "dark_accent": "#007A99",
+        "dark_secondary": "#973542",
+        "dark_success": "#43A047",
+        "dark_info": "#1976D2",
+        "dark_warning": "#FF6D00",
+        "dark_error": "#EF5350"
+    },
+    "BASE_URL": "http://localhost:8080",
+    "STATIC_FILES": "/spa/static",
+    "IS_DEMO": false,
+    "HOST_IP": "*",
+    "API_HOST": "0.0.0.0",
+    "API_PORT": 9000,
+    "API_DOCS": true,
+    "TOKEN_TIME": 48,
+    "GIT_COMMIT_HASH": "0d06494bbfc62fc8a1771a85fd308190891d6167",
+    "ALLOW_SIGNUP": false,
+    "DAILY_SCHEDULE_TIME": "23:45",
+    "SECURITY_MAX_LOGIN_ATTEMPTS": 5,
+    "SECURITY_USER_LOCKOUT_TIME": 24,
+    "DB_ENGINE": "sqlite",
+    "DEFAULT_GROUP": "Home",
+    "SMTP_HOST": null,
+    "SMTP_PORT": "587",
+    "SMTP_FROM_NAME": "Mealie",
+    "SMTP_FROM_EMAIL": null,
+    "SMTP_AUTH_STRATEGY": "TLS",
+    "LDAP_AUTH_ENABLED": false,
+    "LDAP_SERVER_URL": null,
+    "LDAP_TLS_INSECURE": false,
+    "LDAP_TLS_CACERTFILE": null,
+    "LDAP_ENABLE_STARTTLS": false,
+    "LDAP_BASE_DN": null,
+    "LDAP_QUERY_BIND": null,
+    "LDAP_QUERY_PASSWORD": null,
+    "LDAP_USER_FILTER": null,
+    "LDAP_ADMIN_FILTER": null,
+    "LDAP_ID_ATTRIBUTE": "uid",
+    "LDAP_MAIL_ATTRIBUTE": "mail",
+    "LDAP_NAME_ATTRIBUTE": "name",
+    "OIDC_AUTH_ENABLED": false,
+    "OIDC_CLIENT_ID": null,
+    "OIDC_CONFIGURATION_URL": null,
+    "OIDC_SIGNUP_ENABLED": true,
+    "OIDC_USER_GROUP": null,
+    "OIDC_ADMIN_GROUP": null,
+    "OIDC_AUTO_REDIRECT": false,
+    "OIDC_PROVIDER_NAME": "OAuth",
+    "OIDC_REMEMBER_ME": false,
+    "OIDC_SIGNING_ALGORITHM": "RS256",
+    "OIDC_USER_CLAIM": "email",
+    "OIDC_GROUPS_CLAIM": "groups",
+    "OIDC_TLS_CACERTFILE": null,
+    "OPENAI_BASE_URL": null,
+    "OPENAI_API_KEY": null,
+    "OPENAI_MODEL": "gpt-4o",
+    "OPENAI_ENABLE_IMAGE_SERVICES": true,
+    "OPENAI_WORKERS": 2,
+    "OPENAI_SEND_DATABASE_DATA": true,
+    "OPENAI_REQUEST_TIMEOUT": 60,
+    "WORKER_PER_CORE": 1,
+    "UVICORN_WORKERS": 1
+}
+[INFO|scheduler_service|L49] 2026-05-26T11:17:47: Daily tasks scheduled for 2026-05-27 02:45:00+00:00
+[INFO|on|L62] 2026-05-26T11:17:47: Application startup complete.
+[INFO|server|L214] 2026-05-26T11:17:47: Uvicorn running on http://0.0.0.0:9000 (Press CTRL+C to quit)
+[INFO|httptools_impl|L468] 2026-05-26T11:18:01: 127.0.0.1:56996 - "GET /api/app/about HTTP/1.1" 200
+[INFO|httptools_impl|L468] 2026-05-26T11:18:31: 127.0.0.1:34406 - "GET /api/app/about HTTP/1.1" 200
+[INFO|httptools_impl|L468] 2026-05-26T11:19:02: 127.0.0.1:32824 - "GET /api/app/about HTTP/1.1" 200
+[INFO|httptools_impl|L468] 2026-05-26T11:19:15: 172.20.0.1:54980 - "GET / HTTP/1.1" 200
+[INFO|httptools_impl|L468] 2026-05-26T11:19:15: 172.20.0.1:54982 - "GET /_nuxt/f6e2c87.js HTTP/1.1" 200
+[INFO|httptools_impl|L468] 2026-05-26T11:19:15: 172.20.0.1:54980 - "GET /_nuxt/4f93031.js HTTP/1.1" 200
+[INFO|httptools_impl|L468] 2026-05-26T11:19:15: 172.20.0.1:54988 - "GET /_nuxt/1666741.js HTTP/1.1" 200
+[INFO|httptools_impl|L468] 2026-05-26T11:19:15: 172.20.0.1:54996 - "GET /_nuxt/43cddb8.js HTTP/1.1" 200
+[INFO|httptools_impl|L468] 2026-05-26T11:19:15: 172.20.0.1:55008 - "GET /_nuxt/manifest.a944514f.json HTTP/1.1" 200
+[INFO|httptools_impl|L468] 2026-05-26T11:19:15: 172.20.0.1:54988 - "GET /_nuxt/ffbda59.js HTTP/1.1" 200
+[INFO|httptools_impl|L468] 2026-05-26T11:19:15: 172.20.0.1:54988 - "GET /_nuxt/f0a85d5.js HTTP/1.1" 200
+[INFO|httptools_impl|L468] 2026-05-26T11:19:15: 172.20.0.1:54988 - "GET /_nuxt/fc8bf9d.js HTTP/1.1" 200
+[INFO|httptools_impl|L468] 2026-05-26T11:19:15: 172.20.0.1:54988 - "GET /api/app/about/theme HTTP/1.1" 200
+[INFO|httptools_impl|L468] 2026-05-26T11:19:15: 172.20.0.1:54988 - "GET /sw.js HTTP/1.1" 200
+[INFO|httptools_impl|L468] 2026-05-26T11:19:15: 172.20.0.1:54982 - "GET /icons/icon-x64.png HTTP/1.1" 200
+[INFO|httptools_impl|L468] 2026-05-26T11:19:15: 172.20.0.1:54988 - "GET /icons/android-chrome-192x192.png HTTP/1.1" 200
+[INFO|httptools_impl|L468] 2026-05-26T11:19:15: 172.20.0.1:54982 - "GET /favicon.ico HTTP/1.1" 200
+[INFO|httptools_impl|L468] 2026-05-26T11:19:15: 172.20.0.1:54996 - "GET /api/app/about HTTP/1.1" 200
+[INFO|httptools_impl|L468] 2026-05-26T11:19:15: 172.20.0.1:54996 - "GET /api/app/about HTTP/1.1" 200
+[INFO|httptools_impl|L468] 2026-05-26T11:19:15: 172.20.0.1:54996 - "GET /_nuxt/0e3bc77.js HTTP/1.1" 200
+[INFO|httptools_impl|L468] 2026-05-26T11:19:16: 172.20.0.1:54982 - "GET /_nuxt/fonts/Roboto-400-latin21.b009a76.woff2 HTTP/1.1" 200
+[INFO|httptools_impl|L468] 2026-05-26T11:19:16: 172.20.0.1:54988 - "GET /_nuxt/fonts/Roboto-500-latin28.f25d774.woff2 HTTP/1.1" 200

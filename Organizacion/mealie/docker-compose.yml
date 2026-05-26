@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  mealie:
+    image: ghcr.io/mealie-recipes/mealie:v1.12.0
+    container_name: euge_mealie
+    volumes:
+      - ./mealie-data:/app/data
+    ports:
+      - "9000:9000"
+    environment:
+      - ALLOW_REGISTRATION=true
+      - TZ=America/Argentina/Buenos_Aires
+    restart: unless-stopped

@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  homer:
+    image: b4bz/homer:latest
+    container_name: euge_homer
+    volumes:
+      - ./assets:/www/assets
+    ports:
+      - "8081:8080"
+    restart: unless-stopped

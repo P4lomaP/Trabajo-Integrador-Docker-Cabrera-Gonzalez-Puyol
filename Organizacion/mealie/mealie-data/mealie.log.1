@@ -1,0 +1,155 @@
+[INFO|init_db|L80] 2026-05-26T12:48:06: Database connection established.
+[INFO|migration|L215] 2026-05-26T12:48:06: Context impl SQLiteImpl.
+[INFO|migration|L218] 2026-05-26T12:48:06: Will assume non-transactional DDL.
+[INFO|fix_migration_data|L146] 2026-05-26T12:48:06: Checking for migration data fixes
+[INFO|app|L56] 2026-05-26T12:48:06: end: database initialization
+[INFO|app|L60] 2026-05-26T12:48:06: -----SYSTEM STARTUP-----
+[INFO|app|L61] 2026-05-26T12:48:06: ------APP SETTINGS------
+[INFO|app|L62] 2026-05-26T12:48:06: {
+    "TESTING": false,
+    "PRODUCTION": true,
+    "LOG_CONFIG_OVERRIDE": null,
+    "LOG_LEVEL": "info",
+    "theme": {
+        "light_primary": "#E58325",
+        "light_accent": "#007A99",
+        "light_secondary": "#973542",
+        "light_success": "#43A047",
+        "light_info": "#1976D2",
+        "light_warning": "#FF6D00",
+        "light_error": "#EF5350",
+        "dark_primary": "#E58325",
+        "dark_accent": "#007A99",
+        "dark_secondary": "#973542",
+        "dark_success": "#43A047",
+        "dark_info": "#1976D2",
+        "dark_warning": "#FF6D00",
+        "dark_error": "#EF5350"
+    },
+    "BASE_URL": "http://localhost:8080",
+    "STATIC_FILES": "/spa/static",
+    "IS_DEMO": false,
+    "HOST_IP": "*",
+    "API_HOST": "0.0.0.0",
+    "API_PORT": 9000,
+    "API_DOCS": true,
+    "TOKEN_TIME": 48,
+    "GIT_COMMIT_HASH": "0d06494bbfc62fc8a1771a85fd308190891d6167",
+    "ALLOW_SIGNUP": false,
+    "DAILY_SCHEDULE_TIME": "23:45",
+    "SECURITY_MAX_LOGIN_ATTEMPTS": 5,
+    "SECURITY_USER_LOCKOUT_TIME": 24,
+    "DB_ENGINE": "sqlite",
+    "DEFAULT_GROUP": "Home",
+    "SMTP_HOST": null,
+    "SMTP_PORT": "587",
+    "SMTP_FROM_NAME": "Mealie",
+    "SMTP_FROM_EMAIL": null,
+    "SMTP_AUTH_STRATEGY": "TLS",
+    "LDAP_AUTH_ENABLED": false,
+    "LDAP_SERVER_URL": null,
+    "LDAP_TLS_INSECURE": false,
+    "LDAP_TLS_CACERTFILE": null,
+    "LDAP_ENABLE_STARTTLS": false,
+    "LDAP_BASE_DN": null,
+    "LDAP_QUERY_BIND": null,
+    "LDAP_QUERY_PASSWORD": null,
+    "LDAP_USER_FILTER": null,
+    "LDAP_ADMIN_FILTER": null,
+    "LDAP_ID_ATTRIBUTE": "uid",
+    "LDAP_MAIL_ATTRIBUTE": "mail",
+    "LDAP_NAME_ATTRIBUTE": "name",
+    "OIDC_AUTH_ENABLED": false,
+    "OIDC_CLIENT_ID": null,
+    "OIDC_CONFIGURATION_URL": null,
+    "OIDC_SIGNUP_ENABLED": true,
+    "OIDC_USER_GROUP": null,
+    "OIDC_ADMIN_GROUP": null,
+    "OIDC_AUTO_REDIRECT": false,
+    "OIDC_PROVIDER_NAME": "OAuth",
+    "OIDC_REMEMBER_ME": false,
+    "OIDC_SIGNING_ALGORITHM": "RS256",
+    "OIDC_USER_CLAIM": "email",
+    "OIDC_GROUPS_CLAIM": "groups",
+    "OIDC_TLS_CACERTFILE": null,
+    "OPENAI_BASE_URL": null,
+    "OPENAI_API_KEY": null,
+    "OPENAI_MODEL": "gpt-4o",
+    "OPENAI_ENABLE_IMAGE_SERVICES": true,
+    "OPENAI_WORKERS": 2,
+    "OPENAI_SEND_DATABASE_DATA": true,
+    "OPENAI_REQUEST_TIMEOUT": 60,
+    "WORKER_PER_CORE": 1,
+    "UVICORN_WORKERS": 1
+}
+[INFO|scheduler_service|L49] 2026-05-26T12:48:06: Daily tasks scheduled for 2026-05-27 02:45:00+00:00
+[INFO|on|L62] 2026-05-26T12:48:06: Application startup complete.
+[INFO|server|L214] 2026-05-26T12:48:06: Uvicorn running on http://0.0.0.0:9000 (Press CTRL+C to quit)
+[INFO|httptools_impl|L468] 2026-05-26T12:48:24: 127.0.0.1:49416 - "GET /api/app/about HTTP/1.1" 200
+[INFO|httptools_impl|L468] 2026-05-26T12:48:54: 127.0.0.1:52176 - "GET /api/app/about HTTP/1.1" 200
+[INFO|httptools_impl|L468] 2026-05-26T12:49:25: 127.0.0.1:43018 - "GET /api/app/about HTTP/1.1" 200
+[INFO|httptools_impl|L468] 2026-05-26T12:49:55: 127.0.0.1:34796 - "GET /api/app/about HTTP/1.1" 200
+[INFO|httptools_impl|L468] 2026-05-26T12:50:25: 127.0.0.1:51038 - "GET /api/app/about HTTP/1.1" 200
+[INFO|httptools_impl|L468] 2026-05-26T12:50:55: 127.0.0.1:47138 - "GET /api/app/about HTTP/1.1" 200
+[INFO|httptools_impl|L468] 2026-05-26T12:51:26: 127.0.0.1:55084 - "GET /api/app/about HTTP/1.1" 200
+[INFO|httptools_impl|L468] 2026-05-26T12:51:56: 127.0.0.1:59368 - "GET /api/app/about HTTP/1.1" 200
+[INFO|httptools_impl|L468] 2026-05-26T12:52:27: 127.0.0.1:43674 - "GET /api/app/about HTTP/1.1" 200
+[INFO|httptools_impl|L468] 2026-05-26T12:52:57: 127.0.0.1:50382 - "GET /api/app/about HTTP/1.1" 200
+[INFO|httptools_impl|L468] 2026-05-26T12:53:27: 127.0.0.1:59254 - "GET /api/app/about HTTP/1.1" 200
+[INFO|httptools_impl|L468] 2026-05-26T12:53:58: 127.0.0.1:32770 - "GET /api/app/about HTTP/1.1" 200
+[INFO|httptools_impl|L468] 2026-05-26T12:54:28: 127.0.0.1:54240 - "GET /api/app/about HTTP/1.1" 200
+[INFO|httptools_impl|L468] 2026-05-26T12:54:59: 127.0.0.1:60002 - "GET /api/app/about HTTP/1.1" 200
+[INFO|httptools_impl|L468] 2026-05-26T12:55:29: 127.0.0.1:58528 - "GET /api/app/about HTTP/1.1" 200
+[INFO|httptools_impl|L468] 2026-05-26T12:55:59: 127.0.0.1:54432 - "GET /api/app/about HTTP/1.1" 200
+[INFO|httptools_impl|L468] 2026-05-26T12:56:30: 127.0.0.1:59490 - "GET /api/app/about HTTP/1.1" 200
+[INFO|httptools_impl|L468] 2026-05-26T12:57:00: 127.0.0.1:50802 - "GET /api/app/about HTTP/1.1" 200
+[INFO|httptools_impl|L468] 2026-05-26T12:57:30: 127.0.0.1:33454 - "GET /api/app/about HTTP/1.1" 200
+[INFO|httptools_impl|L468] 2026-05-26T12:58:01: 127.0.0.1:36948 - "GET /api/app/about HTTP/1.1" 200
+[INFO|httptools_impl|L468] 2026-05-26T12:58:31: 127.0.0.1:48602 - "GET /api/app/about HTTP/1.1" 200
+[INFO|httptools_impl|L468] 2026-05-26T13:15:04: 127.0.0.1:38758 - "GET /api/app/about HTTP/1.1" 200
+[INFO|httptools_impl|L468] 2026-05-26T13:15:35: 127.0.0.1:36906 - "GET /api/app/about HTTP/1.1" 200
+[INFO|httptools_impl|L468] 2026-05-26T13:16:05: 127.0.0.1:54168 - "GET /api/app/about HTTP/1.1" 200
+[INFO|httptools_impl|L468] 2026-05-26T13:16:35: 127.0.0.1:43504 - "GET /api/app/about HTTP/1.1" 200
+[INFO|httptools_impl|L468] 2026-05-26T13:17:06: 127.0.0.1:58668 - "GET /api/app/about HTTP/1.1" 200
+[INFO|httptools_impl|L468] 2026-05-26T13:17:36: 127.0.0.1:42724 - "GET /api/app/about HTTP/1.1" 200
+[INFO|httptools_impl|L468] 2026-05-26T13:18:06: 127.0.0.1:34236 - "GET /api/app/about HTTP/1.1" 200
+[INFO|httptools_impl|L468] 2026-05-26T13:18:37: 127.0.0.1:34956 - "GET /api/app/about HTTP/1.1" 200
+[INFO|httptools_impl|L468] 2026-05-26T13:19:07: 127.0.0.1:51414 - "GET /api/app/about HTTP/1.1" 200
+[INFO|httptools_impl|L468] 2026-05-26T13:19:37: 127.0.0.1:34246 - "GET /api/app/about HTTP/1.1" 200
+[INFO|httptools_impl|L468] 2026-05-26T13:20:08: 127.0.0.1:49702 - "GET /api/app/about HTTP/1.1" 200
+[INFO|httptools_impl|L468] 2026-05-26T13:20:38: 127.0.0.1:44598 - "GET /api/app/about HTTP/1.1" 200
+[INFO|httptools_impl|L468] 2026-05-26T13:21:08: 127.0.0.1:53586 - "GET /api/app/about HTTP/1.1" 200
+[INFO|httptools_impl|L468] 2026-05-26T13:21:39: 127.0.0.1:37290 - "GET /api/app/about HTTP/1.1" 200
+[INFO|httptools_impl|L468] 2026-05-26T13:22:09: 127.0.0.1:52636 - "GET /api/app/about HTTP/1.1" 200
+[INFO|httptools_impl|L468] 2026-05-26T13:22:39: 127.0.0.1:43324 - "GET /api/app/about HTTP/1.1" 200
+[INFO|httptools_impl|L468] 2026-05-26T13:23:09: 127.0.0.1:51848 - "GET /api/app/about HTTP/1.1" 200
+[INFO|httptools_impl|L468] 2026-05-26T13:23:40: 127.0.0.1:50430 - "GET /api/app/about HTTP/1.1" 200
+[INFO|httptools_impl|L468] 2026-05-26T13:24:10: 127.0.0.1:36860 - "GET /api/app/about HTTP/1.1" 200
+[INFO|httptools_impl|L468] 2026-05-26T13:24:40: 127.0.0.1:47498 - "GET /api/app/about HTTP/1.1" 200
+[INFO|httptools_impl|L468] 2026-05-26T13:25:11: 127.0.0.1:35274 - "GET /api/app/about HTTP/1.1" 200
+[INFO|httptools_impl|L468] 2026-05-26T13:25:41: 127.0.0.1:56422 - "GET /api/app/about HTTP/1.1" 200
+[INFO|httptools_impl|L468] 2026-05-26T13:26:12: 127.0.0.1:54626 - "GET /api/app/about HTTP/1.1" 200
+[INFO|httptools_impl|L468] 2026-05-26T13:26:42: 127.0.0.1:58052 - "GET /api/app/about HTTP/1.1" 200
+[INFO|httptools_impl|L468] 2026-05-26T13:27:12: 127.0.0.1:53864 - "GET /api/app/about HTTP/1.1" 200
+[INFO|httptools_impl|L468] 2026-05-26T13:27:43: 127.0.0.1:44972 - "GET /api/app/about HTTP/1.1" 200
+[INFO|httptools_impl|L468] 2026-05-26T13:28:13: 127.0.0.1:59880 - "GET /api/app/about HTTP/1.1" 200
+[INFO|httptools_impl|L468] 2026-05-26T13:28:43: 127.0.0.1:38136 - "GET /api/app/about HTTP/1.1" 200
+[INFO|httptools_impl|L468] 2026-05-26T13:29:14: 127.0.0.1:49920 - "GET /api/app/about HTTP/1.1" 200
+[INFO|httptools_impl|L468] 2026-05-26T13:29:44: 127.0.0.1:57734 - "GET /api/app/about HTTP/1.1" 200
+[INFO|httptools_impl|L468] 2026-05-26T13:30:14: 127.0.0.1:59584 - "GET /api/app/about HTTP/1.1" 200
+[INFO|httptools_impl|L468] 2026-05-26T13:30:45: 127.0.0.1:34886 - "GET /api/app/about HTTP/1.1" 200
+[INFO|httptools_impl|L468] 2026-05-26T13:31:15: 127.0.0.1:39710 - "GET /api/app/about HTTP/1.1" 200
+[INFO|httptools_impl|L468] 2026-05-26T13:31:45: 127.0.0.1:49174 - "GET /api/app/about HTTP/1.1" 200
+[INFO|httptools_impl|L468] 2026-05-26T13:32:16: 127.0.0.1:34268 - "GET /api/app/about HTTP/1.1" 200
+[INFO|httptools_impl|L468] 2026-05-26T13:32:46: 127.0.0.1:53530 - "GET /api/app/about HTTP/1.1" 200
+[INFO|httptools_impl|L468] 2026-05-26T13:33:16: 127.0.0.1:39038 - "GET /api/app/about HTTP/1.1" 200
+[INFO|httptools_impl|L468] 2026-05-26T13:33:47: 127.0.0.1:45032 - "GET /api/app/about HTTP/1.1" 200
+[INFO|httptools_impl|L468] 2026-05-26T13:34:17: 127.0.0.1:39858 - "GET /api/app/about HTTP/1.1" 200
+[INFO|httptools_impl|L468] 2026-05-26T13:34:48: 127.0.0.1:48406 - "GET /api/app/about HTTP/1.1" 200
+[INFO|httptools_impl|L468] 2026-05-26T13:35:18: 127.0.0.1:42378 - "GET /api/app/about HTTP/1.1" 200
+[INFO|httptools_impl|L468] 2026-05-26T13:35:48: 127.0.0.1:48532 - "GET /api/app/about HTTP/1.1" 200
+[INFO|httptools_impl|L468] 2026-05-26T13:36:19: 127.0.0.1:57610 - "GET /api/app/about HTTP/1.1" 200
+[INFO|httptools_impl|L468] 2026-05-26T13:36:49: 127.0.0.1:39198 - "GET /api/app/about HTTP/1.1" 200
+[INFO|httptools_impl|L468] 2026-05-26T13:37:20: 127.0.0.1:33060 - "GET /api/app/about HTTP/1.1" 200
+[INFO|httptools_impl|L468] 2026-05-26T13:37:50: 127.0.0.1:41288 - "GET /api/app/about HTTP/1.1" 200
+[INFO|httptools_impl|L468] 2026-05-26T13:38:20: 127.0.0.1:41026 - "GET /api/app/about HTTP/1.1" 200
