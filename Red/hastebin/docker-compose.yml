@@ -3,7 +3,7 @@ version: '3.8'
 services:
   hastebin:
     image: rlister/hastebin:latest
-    container_name: euge_hastebin
+    container_name: hastebin
     ports:
       - "8087:7777"
     restart: unless-stopped

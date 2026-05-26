@@ -3,7 +3,7 @@ version: '3.8'
 services:
   mealie:
     image: ghcr.io/mealie-recipes/mealie:v1.12.0
-    container_name: euge_mealie
+    container_name: mealie
     volumes:
       - ./mealie-data:/app/data
     ports:

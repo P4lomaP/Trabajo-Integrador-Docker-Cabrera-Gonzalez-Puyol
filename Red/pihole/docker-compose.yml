@@ -3,11 +3,11 @@ version: '3.8'
 services:
   pihole:
     image: pihole/pihole:latest
-    container_name: euge_pihole
+    container_name: pihole
     ports:
       - "53:53/tcp"
       - "53:53/udp"
-      - "8085:80/tcp" #8085 para la web de administración
+      - "8086:80/tcp" #8085 para la web de administración
     environment:
       TZ: 'America/Argentina/Buenos_Aires'
       WEBPASSWORD: 'pihole2026' #contraseña de entrada

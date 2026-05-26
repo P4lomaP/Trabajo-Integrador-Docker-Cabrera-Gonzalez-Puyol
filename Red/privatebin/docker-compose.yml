@@ -3,9 +3,9 @@ version: '3.8'
 services:
   privatebin:
     image: privatebin/nginx-fpm-alpine:latest
-    container_name: euge_privatebin
+    container_name: privatebin
     ports:
-      - "8086:8080"
+      - "8076:8080"
     volumes:
       - ./privatebin-data:/srv/data
     restart: unless-stopped
