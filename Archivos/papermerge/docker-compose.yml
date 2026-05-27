@@ -1,0 +1,13 @@
+services:
+  papermerge:
+    image: papermerge/papermerge:latest
+    container_name: papermerge-docs
+    restart: unless-stopped
+    ports:
+      - '9300:8000'
+    volumes:
+      - ./data:/data
+      - ./media:/media
+    environment:
+      - PAPERMERGE__SECURITY__SECRET_KEY=clave_secreta_para_el_tp_docker_2026
+      - PAPERMERGE__DATABASE__URL=sqlite:////data/db.sqlite3
