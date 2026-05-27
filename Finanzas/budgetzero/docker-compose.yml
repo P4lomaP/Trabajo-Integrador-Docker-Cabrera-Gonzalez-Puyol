@@ -1,0 +1,9 @@
+services:
+  actual-budget:
+    image: ghcr.io/actualbudget/actual-server:latest
+    container_name: budgetzero-actual
+    restart: unless-stopped
+    ports:
+      - '9200:5006'
+    volumes:
+      - ./actual-data:/data
