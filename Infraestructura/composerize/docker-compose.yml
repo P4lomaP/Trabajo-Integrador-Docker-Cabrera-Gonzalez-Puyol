@@ -1,0 +1,9 @@
+version: '3.9'
+
+services:
+  composerize:
+    image: oaklight/composerize:latest
+    container_name: composerize
+    restart: unless-stopped
+    ports:
+      - '8089:80' # <--- Cambiamos 8080 por 8089
