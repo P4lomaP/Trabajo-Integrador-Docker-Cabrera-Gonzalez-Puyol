@@ -1,0 +1,15 @@
+services:
+  code-server:
+    image: lscr.io/linuxserver/code-server:latest
+    container_name: code-server
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=America/Argentina/Buenos_Aires
+      - PASSWORD=alumnos2026 # La contraseña para entrar a tu VS Code web
+      - SUDO_PASSWORD=alumnos2026 # Contraseña para instalar cosas adentro
+    volumes:
+      - ./config:/config
+    ports:
+      - "8443:8443"
+    restart: unless-stopped

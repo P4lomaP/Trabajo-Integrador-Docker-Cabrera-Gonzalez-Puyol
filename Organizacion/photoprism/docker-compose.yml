@@ -3,7 +3,7 @@ version: '3.8'
 services:
   photoprism:
     image: photoprism/photoprism:latest
-    container_name: euge_photoprism
+    container_name: photoprism
     ports:
       - "2342:2342"
     environment:

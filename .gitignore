@@ -15,3 +15,7 @@ pihole-dnsmasq/
 npm-letsencrypt/
 *.log*
 *.toml.*
+**/work/
+**/config/
+.DS_Store
+Thumbs.db

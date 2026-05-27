@@ -1,0 +1,12 @@
+services:
+  jupyter:
+    image: jupyter/base-notebook:latest
+    container_name: jupyter
+    environment:
+      - JUPYTER_TOKEN=alumnos2026
+      - TZ=America/Argentina/Buenos_Aires
+    volumes:
+      - ./work:/home/jovyan/work
+    ports:
+      - "8889:8888"
+    restart: unless-stopped
