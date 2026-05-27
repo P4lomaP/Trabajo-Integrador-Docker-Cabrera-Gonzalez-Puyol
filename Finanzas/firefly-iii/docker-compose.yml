@@ -1,0 +1,36 @@
+services:
+  firefly-db:
+    image: mariadb:10.11
+    container_name: firefly-iii-db
+    restart: unless-stopped
+    environment:
+      - MYSQL_RANDOM_ROOT_PASSWORD=yes
+      - MYSQL_DATABASE=firefly
+      - MYSQL_USER=firefly
+      - MYSQL_PASSWORD=secret_firefly_pass
+    volumes:
+      - firefly_db_data:/var/lib/mysql
+
+  firefly-app:
+    image: fireflyiii/core:latest
+    container_name: firefly-iii-web
+    restart: unless-stopped
+    ports:
+      - '8099:8080'
+    depends_on:
+      - firefly-db
+    environment:
+      - APP_KEY=abcd1234efgh5678ijkl9012mnop3456
+      - DB_CONNECTION=mysql
+      - DB_HOST=firefly-db
+      - DB_PORT=3306
+      - DB_DATABASE=firefly
+      - DB_USERNAME=firefly   # <--- Corregido (Antes era DB_USER)
+      - DB_PASSWORD=secret_firefly_pass
+      - TZ=America/Argentina/Buenos_Aires
+    volumes:
+      - firefly_export:/var/www/html/storage/export
+
+volumes:
+  firefly_db_data:
+  firefly_export:
