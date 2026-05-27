@@ -1,6 +1,6 @@
 services:
   papermerge:
-    image: papermerge/papermerge:latest
+    image: papermerge/papermerge:2.1.2 # <--- Usamos la versión estable que permite login directo
     container_name: papermerge-docs
     restart: unless-stopped
     ports:
@@ -11,3 +11,6 @@ services:
     environment:
       - PAPERMERGE__SECURITY__SECRET_KEY=clave_secreta_para_el_tp_docker_2026
       - PAPERMERGE__DATABASE__URL=sqlite:////data/db.sqlite3
+      - PAPERMERGE__AUTH__SUPERUSER_USERNAME=admin # <--- Tu usuario para el TP
+      - PAPERMERGE__AUTH__SUPERUSER_PASSWORD=admin # <--- Tu contraseña para el TP
+      - PAPERMERGE__AUTH__SUPERUSER_EMAIL=admin@ejemplo.com
